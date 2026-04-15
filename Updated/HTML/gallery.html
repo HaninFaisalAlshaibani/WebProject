@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>معرض المناطق | اكتشف السعودية</title>
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body class="gallery-page">
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">اكتشف السعودية</div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="gallery.html" class="active">معرض المناطق</a></li>
+        <li><a href="details.html">التفاصيل</a></li>
+        <li><a href="admin/login.html">دخول المشرف</a></li>
+      </ul>
+
+      <button id="nightModeBtn" class="night-btn">🌙 الوضع الليلي</button>
+    </nav>
+  </header>
+
+  <section class="gallery-hero">
+    <div class="gallery-hero-overlay"></div>
+    <div class="gallery-hero-content">
+      <p class="gallery-kicker">Discover Saudi Arabia</p>
+      <h1>معرض المناطق</h1>
+      <p class="gallery-subtitle">
+        استكشف مدن ومناطق المملكة العربية السعودية 
+      </p>
+    </div>
+  </section>
+
+  <main class="gallery-shell">
+    <section class="gallery-header-block">
+      <div class="gallery-header-copy">
+        <div>
+          <h2>وجهات مختارة من المملكة</h2>
+          <p>
+            ابحث عن مدينة أو منطقة، واختر التصنيف المناسب لعرض النتائج بشكل أسرع.
+          </p>
+        </div>
+      </div>
+
+      <div class="gallery-controls">
+        <div class="control-field">
+          <label for="searchInput">البحث</label>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="ابحث عن مدينة أو منطقة"
+          />
+        </div>
+
+        <div class="control-field">
+          <label for="regionFilter">التصنيف</label>
+          <select id="regionFilter">
+            <option value="all">كل المناطق</option>
+            <option value="وسطى">وسطى</option>
+            <option value="شرقية">شرقية</option>
+            <option value="غربية">غربية</option>
+            <option value="جنوبية">جنوبية</option>
+            <option value="شمالية">شمالية</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="results-bar">
+        <span id="resultsCount">عدد النتائج: 20</span>
+      </div>
+    </section>
+
+    <section class="gallery-grid" id="galleryGrid">
+        <a href="details.html?id=1" class="place-card" data-region="وسطى" data-search="الرياض وسطى عاصمة المملكة ومركز اقتصادي">
+            <div class="place-card-image">
+            <img src="images/riyadh.jpg" alt="الرياض" />
+            <span class="place-badge">وسطى</span>
+            </div>
+            <div class="place-card-body">
+            <h3>الرياض</h3>
+            <p>عاصمة المملكة وأكبر مدنها، وتُعد المركز السياسي والاقتصادي في المنطقة.</p>
+            </div>
+        </a>
+
+        <a href="details.html?id=2" class="place-card" data-region="غربية" data-search="مكة المكرمة غربية مدينة دينية الحج العمرة">
+            <div class="place-card-image">
+            <img src="images/Makkah.jpg" alt="مكة المكرمة" />
+            <span class="place-badge">غربية</span>
+            </div>
+            <div class="place-card-body">
+            <h3>مكة المكرمة</h3>
+            <p>أقدس مدينة في الإسلام وتستقبل ملايين المسلمين سنوياً لأداء الحج والعمرة.</p>
+            </div>
+        </a>
+
+        <a href="details.html?id=3" class="place-card" data-region="غربية" data-search="العلا غربية آثار طبيعة تاريخ">
+            <div class="place-card-image">
+            <img src="images/Alaula.jpg" alt="العُلا" />
+            <span class="place-badge">غربية</span>
+            </div>
+            <div class="place-card-body">
+            <h3>العُلا</h3>
+            <p>واحة تاريخية تضم آثاراً نبطية مثل مدائن صالح، أحد مواقع التراث العالمي.</p>
+            </div>
+        </a>
+
+        <a href="details.html?id=4" class="place-card" data-region="شرقية" data-search="الخبر شرقية واجهة بحرية كورنيش">
+            <div class="place-card-image">
+            <img src="images/Alkhobar.jpg" alt="الخبر" />
+            <span class="place-badge">شرقية</span>
+            </div>
+            <div class="place-card-body">
+            <h3>الخبر</h3>
+            <p>واجهة بحرية حديثة ومرافق حضرية مميزة.</p>
+            </div>
+        </a>
+
+        <a href="details.html?id=5" class="place-card" data-region="جنوبية" data-search="أبها جنوبية جبال طبيعة ضباب">
+            <div class="place-card-image">
+            <img src="images/Abha.avif" alt="أبها" />
+            <span class="place-badge">جنوبية</span>
+            </div>
+            <div class="place-card-body">
+            <h3>أبها</h3>
+            <p>مدينة جبلية تتميز بالأجواء المعتدلة والطبيعة الخضراء.</p>
+            </div>
+        </a>
+
+        <a href="details.html?id=6" class="place-card" data-region="شمالية" data-search="تبوك شمالية تاريخ وادي ديسة">
+            <div class="place-card-image">
+            <img src="images/tabuk.jpg" alt="تبوك" />
+            <span class="place-badge">شمالية</span>
+            </div>
+            <div class="place-card-body">
+            <h3>تبوك</h3>
+            <p>مدينة تاريخية في شمال المملكة ومواقع طبيعية بارزة.</p>
+            </div>
+        </a>
+
+        <a href="details.html?id=7" class="place-card" data-region="شرقية" data-search="الأحساء شرقية واحة نخيل تراث">
+            <div class="place-card-image">
+            <img src="images/Alahsa.jpg" alt="الأحساء" />
+            <span class="place-badge">شرقية</span>
+            </div>
+            <div class="place-card-body">
+            <h3>الأحساء</h3>
+            <p>واحة تاريخية مشهورة بالنخيل والتراث الثقافي.</p>
+            </div>
+        </a>
+
+        <a href="details.html?id=8" class="place-card" data-region="غربية" data-search="جدة غربية بحر كورنيش تاريخ">
+            <div class="place-card-image">
+            <img src="images/Jeddah.webp" alt="جدة" />
+            <span class="place-badge">غربية</span>
+            </div>
+            <div class="place-card-body">
+            <h3>جدة</h3>
+            <p>مدينة ساحلية على البحر الأحمر تُعرف بأنها البوابة الرئيسية للحجاج ومركز تجاري مهم.</p>
+            </div>
+        </a>
+
+        <a href="details.html?id=9" class="place-card" data-region="وسطى" data-search="الدرعية وسطى تاريخ تراث حي الطريف">
+            <div class="place-card-image">
+            <img src="images/Diriayh.webp" alt="الدرعية" />
+            <span class="place-badge">وسطى</span>
+            </div>
+            <div class="place-card-body">
+            <h3>الدرعية</h3>
+            <p>مهد الدولة السعودية الأولى ووجهة تراثية بارزة.</p>
+            </div>
+        </a>
+
+        <a href="details.html?id=10" class="place-card" data-region="وسطى" data-search="الخرج وسطى زراعة طبيعة معالم">
+            <div class="place-card-image">
+            <img src="images/Alkharj.jpg" alt="الخرج" />
+            <span class="place-badge">وسطى</span>
+            </div>
+            <div class="place-card-body">
+            <h3>الخرج</h3>
+            <p>مدينة معروفة بواحاتها ومزارعها وتنوعها الطبيعي.</p>
+            </div>
+        </a>
+
+        <a href="details.html?id=11" class="place-card" data-region="غربية" data-search="المدينة المنورة غربية دينية تاريخية المسجد النبوي">
+            <div class="place-card-image">
+            <img src="images/Almadinah.jpg" alt="المدينة المنورة" />
+            <span class="place-badge">غربية</span>
+            </div>
+            <div class="place-card-body">
+            <h3>المدينة المنورة</h3>
+            <p>مدينة ذات مكانة دينية عظيمة وتاريخ إسلامي عريق.</p>
+            </div>
+        </a>
+
+        <a href="details.html?id=12" class="place-card" data-region="وسطى" data-search="الرس قصيم وسطى تراث قصيم">
+            <div class="place-card-image">
+            <img src="images/Alrass.jpg" alt="الرس" />
+            <span class="place-badge">وسطى</span>
+            </div>
+            <div class="place-card-body">
+            <h3>الرس</h3>
+            <p>مدينة تاريخية في القصيم تتميز بطابعها المحلي وتراثها.</p>
+            </div>
+        </a>
+
+        <a href="details.html?id=13" class="place-card" data-region="وسطى" data-search="بريدة قصيم وسطى تمور أسواق">
+            <div class="place-card-image">
+            <img src="images/Buraydh.jpeg" alt="بريدة" />
+            <span class="place-badge">وسطى</span>
+            </div>
+            <div class="place-card-body">
+            <h3>بريدة</h3>
+            <p>حاضرة القصيم ومشهورة بأسواق التمور والأنشطة الثقافية.</p>
+            </div>
+        </a>
+
+        <a href="details.html?id=14" class="place-card" data-region="وسطى" data-search="عنيزة قصيم وسطى ثقافة تراث">
+            <div class="place-card-image">
+            <img src="images/Unaizah.jpg" alt="عنيزة" />
+            <span class="place-badge">وسطى</span>
+            </div>
+            <div class="place-card-body">
+            <h3>عنيزة</h3>
+            <p>مدينة أنيقة في القصيم معروفة بتراثها وأسواقها الجميلة.</p>
+            </div>
+        </a>
+
+        <a href="details.html?id=15" class="place-card" data-region="شرقية" data-search="الدمام شرقية بحر كورنيش مدينة حديثة">
+            <div class="place-card-image">
+            <img src="images/Dammam.jpg" alt="الدمام" />
+            <span class="place-badge">شرقية</span>
+            </div>
+            <div class="place-card-body">
+            <h3>الدمام</h3>
+            <p>عاصمة المنطقة الشرقية ومركز رئيسي لصناعة النفط والتجارة.</p>
+            </div>
+        </a>
+
+        <a href="details.html?id=16" class="place-card" data-region="غربية" data-search="الطائف غربية جبال ورد مصيف">
+            <div class="place-card-image">
+            <img src="images/Taif.jpg" alt="الطائف" />
+            <span class="place-badge">غربية</span>
+            </div>
+            <div class="place-card-body">
+            <h3>الطائف</h3>
+            <p>مدينة جبلية مرتفعة تُعرف بمناخها المعتدل وإنتاجها للورد الطائفي.</p>
+            </div>
+        </a>
+
+        <a href="details.html?id=20" class="place-card" data-region="جنوبية" data-search="الباحة جنوبية جبال غابات سياحة طبيعة">
+            <div class="place-card-image">
+                <img src="images/Albaha.jpg" alt="الباحة" />
+                <span class="place-badge">جنوبية</span>
+            </div>
+            <div class="place-card-body">
+                <h3>الباحة</h3>
+                <p>منطقة جبلية ساحرة تتميز بالغابات والقرى التراثية والأجواء المعتدلة.</p>
+            </div>
+        </a>
+
+        <a href="details.html?id=17" class="place-card" data-region="جنوبية" data-search="جازان جنوبية بحر جزر طبيعة">
+            <div class="place-card-image">
+            <img src="images/Jazan.jpg" alt="جازان" />
+            <span class="place-badge">جنوبية</span>
+            </div>
+            <div class="place-card-body">
+            <h3>جازان</h3>
+            <p>منطقة ساحلية جنوبية تتميز بالطبيعة والجزر والتنوع البيئي.</p>
+            </div>
+        </a>
+        <a href="details.html?id=18" class="place-card" data-region="شمالية" data-search="نيوم شمالية مستقبل سياحة بحر مشاريع حديثة">
+            <div class="place-card-image">
+                <img src="images/Neom.jpg" alt="نيوم" />
+                <span class="place-badge">شمالية</span>
+            </div>
+            <div class="place-card-body">
+                <h3>نيوم</h3>
+                <p>مشروع مستقبلي ضخم يجمع بين التقنية والطبيعة والسياحة.</p>
+            </div>
+        </a>
+
+        <a href="details.html?id=19" class="place-card" data-region="شمالية" data-search="حائل شمالية جبال آثار صحراء">
+            <div class="place-card-image">
+                <img src="images/Hail.jpg" alt="حائل" />
+                <span class="place-badge">شمالية</span>
+            </div>
+            <div class="place-card-body">
+                <h3>حائل</h3>
+                <p>منطقة تاريخية تتميز بالجبال والآثار والطبيعة الصحراوية.</p>
+            </div>
+        </a>
+    </section>
+
+    <p id="emptyState" class="gallery-empty" hidden>لا توجد نتائج مطابقة.</p>
+  </main>
+
+  <footer>
+    <p>© اكتشف السعودية — جامعة الملك سعود</p>
+  </footer>
+
+  <script src="JS/main.js"></script>
+  <script src="JS/gallery.js"></script>
+</body>
+</html>
