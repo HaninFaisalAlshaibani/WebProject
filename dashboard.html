@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>لوحة تحكم المشرف</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS file — goes up one folder since we are inside /admin/ -->
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+
+  <!-- ===== HEADER / NAVBAR (Admin Side) ===== -->
+  <header>
+    <nav class="navbar">
+
+      <div class="logo">لوحة المشرف</div>
+
+      <ul class="nav-links">
+        <li><a href="../index.html">زيارة الموقع</a></li>
+        <li><a href="dashboard.html" class="active">لوحة التحكم</a></li>
+        <li><a href="add.html">إضافة محتوى</a></li>
+      </ul>
+
+    </nav>
+  </header>
+  <!-- ===== END HEADER ===== -->
+
+
+  <!-- ===== DASHBOARD MAIN CONTENT ===== -->
+  <main class="dashboard-container">
+
+    <!-- Page title -->
+    <h1>إدارة المحتوى</h1>
+    <p>استخدم هذه الصفحة لإدارة محتوى الموقع من خلال عرض السجلات وإضافتها أو تعديل أو حذف المحتوى.</p>
+
+
+    <!-- ===== ACTION BUTTONS ROW ===== -->
+    <!-- dashboard-actions uses flexbox to put Add New on right, Logout on left -->
+    <div class="dashboard-actions">
+
+      <!-- Add New button — links to add content page -->
+      <a href="add.html" class="btn-add">+ إضافة محتوى جديد</a>
+
+      <!-- Logout link — ends the session (PHP will handle this) -->
+      <a href="logout.php" class="btn-logout">تسجيل الخروج</a>
+
+    </div>
+    <!-- ===== END ACTION BUTTONS ===== -->
+
+
+    <!-- ===== INLINE SUCCESS MESSAGE ===== -->
+    <!-- This is hidden by default — JavaScript OR PHP will show it -->
+    <!-- Used after: delete / add / update actions -->
+    <div id="successMessage" class="success-message">
+      <!-- Message text is set by JavaScript -->
+    </div>
+    <!-- ===== END SUCCESS MESSAGE ===== -->
+
+
+    <!-- ===== CONTENT TABLE ===== -->
+    <table class="dashboard-table">
+
+      <!-- Table head — column titles -->
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>المنطقة</th>
+          <th>التصنيف</th>
+          <th>الوصف</th>
+          <th>الإجراءات</th>
+        </tr>
+      </thead>
+
+      <!-- Table body — rows loaded from database by PHP -->
+      <!-- The rows below are EXAMPLE rows to show structure -->
+      <!-- In the real project, PHP will loop and print these rows -->
+      <tbody>
+
+        <tr>
+          <td>1</td>
+          <td>الرياض</td>
+          <td>وسطى</td>
+          <td>عاصمة المملكة ومركز اقتصادي</td>
+          <td>
+            <!-- Edit button — links to update page with this row's ID -->
+            <a href="update.php?id=1" class="btn-edit">تعديل</a>
+            <!-- Delete button — JS will confirm before deleting -->
+            <button class="btn-delete">حذف</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>2</td>
+          <td>مكة المكرمة</td>
+          <td>غربية</td>
+          <td>مدينة دينية يقصدها المسلمون للحج</td>
+          <td>
+            <a href="update.php?id=2" class="btn-edit">تعديل</a>
+            <button class="btn-delete">حذف</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>3</td>
+          <td>العُلا</td>
+          <td>غربية</td>
+          <td>مواقع أثرية وطبيعة خلابة</td>
+          <td>
+            <a href="update.php?id=3" class="btn-edit">تعديل</a>
+            <button class="btn-delete">حذف</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>4</td>
+          <td>الخبر</td>
+          <td>شرقية</td>
+          <td>واجهة بحرية ومعالم حديثة</td>
+          <td>
+            <a href="update.php?id=4" class="btn-edit">تعديل</a>
+            <button class="btn-delete">حذف</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>5</td>
+          <td>أبها</td>
+          <td>جنوبية</td>
+          <td>مدينة جبلية ذات طبيعة خلابة</td>
+          <td>
+            <a href="update.php?id=5" class="btn-edit">تعديل</a>
+            <button class="btn-delete">حذف</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>6</td>
+          <td>تبوك</td>
+          <td>شمالية</td>
+          <td>مدينة تاريخية في شمال المملكة</td>
+          <td>
+            <a href="update.php?id=6" class="btn-edit">تعديل</a>
+            <button class="btn-delete">حذف</button>
+          </td>
+        </tr>
+
+      </tbody>
+
+    </table>
+    <!-- ===== END CONTENT TABLE ===== -->
+
+  </main>
+  <!-- ===== END DASHBOARD MAIN CONTENT ===== -->
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© اكتشف السعودية — جامعة الملك سعود</p>
+  </footer>
+  <!-- ===== END FOOTER ===== -->
+
+
+  <!-- JavaScript file — goes up one folder -->
+  <script src="../script.js"></script>
+
+</body>
+</html>
