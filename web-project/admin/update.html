@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تحديث مكان | لوحة المشرف</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/update.css">
+</head>
+<body class="update-page">
+
+  <header>
+    <nav class="navbar admin-navbar-simple">
+      <div class="logo">لوحة المشرف</div>
+
+      <div class="admin-navbar-actions">
+        <button id="nightModeBtn" class="night-btn">🌙 الوضع الليلي</button>
+        <a href="login.html" class="btn-logout admin-logout-link">تسجيل الخروج</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="update-shell">
+    <section class="update-head">
+      <div>
+        <h1>تحديث مكان</h1>
+        <p>قم بتعديل البيانات الحالية وحفظ التحديثات.</p>
+      </div>
+
+      <a href="dashboard.html" class="btn-back-dashboard">العودة إلى لوحة المشرف</a>
+    </section>
+
+    <section class="update-layout">
+      <form id="updateForm" class="update-form-card" novalidate>
+        <h2>بيانات التحديث</h2>
+        <p class="update-current-name">المكان الحالي: <strong id="currentPlaceName">—</strong></p>
+
+        <div class="form-group">
+          <label for="citySelector">اختر المدينة المراد تحديثها</label>
+          <select id="citySelector">
+            <option value="" disabled selected hidden>اختر المدينة</option>
+            <option value="العلا">العلا</option>
+            <option value="مكة">مكة</option>
+            <option value="الرياض">الرياض</option>
+            <option value="تبوك">تبوك</option>
+            <option value="أبها">أبها</option>
+            <option value="الخبر">الخبر</option>
+            <option value="الدرعية">الدرعية</option>
+            <option value="جدة">جدة</option>
+            <option value="الأحساء">الأحساء</option>
+            <option value="الرس">الرس</option>
+            <option value="المدينة">المدينة</option>
+            <option value="الخرج">الخرج</option>
+            <option value="الدمام">الدمام</option>
+            <option value="عنيزة">عنيزة</option>
+            <option value="بريدة">بريدة</option>
+            <option value="جازان">جازان</option>
+            <option value="الباحة">الباحة</option>
+            <option value="الطائف">الطائف</option>
+            <option value="حائل">حائل</option>
+            <option value="نيوم">نيوم</option>
+          </select>
+          <small class="error-message"></small>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="placeName">اسم المكان</label>
+            <input type="text" id="placeName" placeholder="سيظهر اسم المدينة هنا" />
+            <small class="error-message"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="placeType">التصنيف / النوع</label>
+            <select id="placeType">
+              <option value="" disabled selected hidden>اختر التصنيف</option>
+              <option value="غربية">غربية</option>
+              <option value="شرقية">شرقية</option>
+              <option value="وسطى">وسطى</option>
+              <option value="جنوبية">جنوبية</option>
+              <option value="شمالية">شمالية</option>
+            </select>
+            <small class="error-message"></small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="placeDescription">الوصف</label>
+          <textarea id="placeDescription" rows="5" placeholder="سيظهر وصف المدينة هنا"></textarea>
+          <small class="error-message"></small>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="placeFeatures">المميزات</label>
+            <input type="text" id="placeFeatures" placeholder="سيظهر وصف المميزات هنا" />
+            <small class="error-message"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="placeActivities">الأنشطة</label>
+            <input type="text" id="placeActivities" placeholder="سيظهر وصف الأنشطة هنا" />
+            <small class="error-message"></small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="bestLandmarks">أفضل المعالم زيارة</label>
+          <textarea id="bestLandmarks" rows="4" placeholder="سيظهر أفضل المعالم هنا"></textarea>
+          <small class="error-message"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="mainImage">تحديث الصورة الرئيسية (اختياري)</label>
+          <input type="file" id="mainImage" accept="image/*" />
+        </div>
+
+        <div class="form-group">
+          <label>صور المعرض (اختياري)</label>
+          <div class="multi-file-grid">
+            <input type="file" class="gallery-input" accept="image/*" />
+            <input type="file" class="gallery-input" accept="image/*" />
+            <input type="file" class="gallery-input" accept="image/*" />
+          </div>
+        </div>
+
+        <button type="submit" class="btn-save-update">حفظ التحديثات</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© اكتشف السعودية — جامعة الملك سعود</p>
+  </footer>
+
+  <script src="../JS/main.js"></script>
+  <script src="../JS/update.js"></script>
+</body>
+</html>

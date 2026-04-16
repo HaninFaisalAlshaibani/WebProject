@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تفاصيل المكان</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/details.css">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">اكتشف السعودية</div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="gallery.html">معرض المناطق</a></li>
+        <li><a href="details.html" class="active">التفاصيل</a></li>
+        <li><a href="../admin/login.html">دخول المشرف</a></li>
+      </ul>
+
+      <button id="nightModeBtn" class="night-btn">🌙 الوضع الليلي</button>
+    </nav>
+  </header>
+
+  <main class="details-shell">
+
+    <section class="details-hero-card">
+      <img id="mainImage" src="../images/riyadh/1.jpg" alt="الصورة الرئيسية">
+    </section>
+
+    <section class="details-info-card">
+      <h1 id="placeTitle">الرياض</h1>
+      <p id="placeDescription">
+        الرياض هي عاصمة المملكة العربية السعودية وتجمع بين التاريخ العريق
+        والتطور الحضاري والمعالم الثقافية الحديثة.
+      </p>
+    </section>
+
+    <section class="quick-info-card">
+      <h2>معلومات سريعة</h2>
+      <div class="quick-info-grid">
+        <div class="quick-info-item"><strong>الموقع:</strong> <span id="placeLocation">وسط المملكة</span></div>
+        <div class="quick-info-item"><strong>أفضل موسم:</strong> <span id="placeSeason">الشتاء</span></div>
+        <div class="quick-info-item"><strong>أبرز الأنشطة:</strong> <span id="placeActivities">تسوق، فعاليات، زيارات</span></div>
+      </div>
+    </section>
+
+    <section class="landmarks-card">
+      <h2>أبرز المعالم</h2>
+      <ul class="landmarks-list" id="landmarksList">
+        <li>برج المملكة</li>
+        <li>المتحف الوطني</li>
+        <li>الدرعية</li>
+      </ul>
+    </section>
+
+    <section class="gallery-card">
+      <h2>معرض الصور</h2>
+      <div class="thumb-grid">
+        <img class="thumb active-thumb" src="../images/riyadh/1.jpg" alt="صورة 1">
+        <img class="thumb" src="../images/riyadh/2.jpg" alt="صورة 2">
+        <img class="thumb" src="../images/riyadh/3.jpg" alt="صورة 3">
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© اكتشف السعودية — جامعة الملك سعود</p>
+  </footer>
+
+  <script src="../JS/main.js"></script>
+  <script src="../JS/details.js"></script>
+</body>
+</html>
