@@ -106,17 +106,20 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 
 <div class="admin-navbar-actions">
 <button id="nightModeBtn" class="night-btn">🌙 الوضع الليلي</button>
-<a href="dashboard.php" class="btn-back-dashboard">العودة للوحة التحكم</a>
 </div>
 
 </nav>
 </header>
 
 <main class="update-shell">
+  <div class="page-head">
+    <h1>تحديث مكان</h1>
 
-<section class="update-head">
-<h1>تحديث مكان</h1>
-<p>قم بتعديل البيانات الحالية</p>
+    <a href="dashboard.php" class="btn-back-dashboard">
+      العودة للوحة التحكم
+    </a>
+  </div>
+  <p class="update-subtitle">قم بتعديل البيانات الحالية</p>
 </section>
 
 <form method="POST" enctype="multipart/form-data" class="update-form-card">
